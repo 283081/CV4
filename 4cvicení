@@ -38,6 +38,7 @@ int main()
 
 	int rok = vstup();
 
-	printf("%d\n", jePrestupny(rok));
+	printf("%d %d",rok , jePrestupny(rok));
 
 }
+
