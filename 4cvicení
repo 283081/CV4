@@ -1,0 +1,43 @@
+// cviceni4.cpp: Definuje vstupní bod pro aplikaci.
+//
+
+#include "cviceni4.h"
+
+using namespace std;
+
+int jePrestupny(int rok) {
+
+	if ((rok % 4 == 0) && (rok % 100 != 0 || rok % 400 == 0))
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+
+int vstup() {
+	int rok;
+	printf("zadejte rok");
+	scanf("%d", &rok);
+	return rok;
+}
+
+
+int main()
+{
+
+	printf("1000 %d\n", jePrestupny(1000));
+	printf("2000 %d\n", jePrestupny(2000));
+	printf("2002 %d\n", jePrestupny(2002));
+	printf("2012 %d\n", jePrestupny(2012));
+	printf("2022 %d\n", jePrestupny(2022));
+	printf("2200 %d\n", jePrestupny(2200));
+
+	int rok = vstup();
+
+	printf("%d\n", jePrestupny(rok));
+
+}
